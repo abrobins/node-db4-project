@@ -16,11 +16,21 @@ router.get("/", (req, res) => {
 
 router.get("/:id/shoppingList", (req, res) => {
   Recipes.getShoppingList(req.params.id)
-    .then(list => {
-      res.json(list);
+    .then(shoppinglist => {
+      res.json(shoppinglist);
     })
     .catch(err => {
-      res.status(500).json({ message: "Failed to get shopping list." });
+      res.status(500).json({ message: "Failed to access shopping list." });
+    });
+});
+
+router.get("/:id/instructions", (req, res) => {
+  Recipes.getInstructions(req.params.id)
+    .then(step => {
+      res.json(step);
+    })
+    .catch(err => {
+      res.status(500).json({ message: "Failed to get recipe directions." });
     });
 });
 

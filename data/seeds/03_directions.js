@@ -20,6 +20,6 @@ exports.seed = async function(knex) {
       instructions: "Place peanut butter on bagel",
       recipe_id: 2
     },
-    { direction_number: "2", instructions: "Enjoy! :)", recipe_id: 2 }
+    { direction_number: "3", instructions: "Enjoy! :)", recipe_id: 2 }
   ]);
 };
