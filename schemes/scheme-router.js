@@ -4,6 +4,8 @@ const Recipes = require("./scheme-model");
 
 const router = express.Router();
 
+// STRETCH ENDPOINTS
+
 router.get("/", (req, res) => {
   Recipes.getRecipes()
     .then(recipes => {
